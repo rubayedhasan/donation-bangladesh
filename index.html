@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- header section  -->
-    <header class="sticky top-0">
+    <header class="">
       <!-- section:: navbar -->
       <div class="bg-[#D4C9BE] py-5 md:py-8 px-5">
         <nav
@@ -67,7 +67,10 @@
       </div>
 
       <!-- section:: banner section  -->
-      <section id="banner" class="bg-[#F1EFEC]/95 px-5 py-8 lg:pt-14 lg:pb-8">
+      <section
+        id="banner"
+        class="bg-[#F1EFEC] shadow-sm px-5 py-8 lg:pt-14 lg:pb-12 rounded-b-sm"
+      >
         <div class="container mx-auto flex justify-center items-center gap-8">
           <button
             class="btn bg-gradient-to-r from-[#E0D8C3] to-[#D2C7B0] text-[#123458] font-semibold lg:text-xl px-6 py-3 lg:px-10 lg:py-7 rounded-lg shadow-md hover:from-[#D2C7B0] hover:to-[#E0D8C3] transition ease-in-out duration-300"
@@ -84,10 +87,76 @@
     </header>
 
     <!-- main section  -->
-    <main></main>
+    <main class="px-5 pb-10 lg:pb-16 pt-12 lg:pt-20">
+      <div class="container mx-auto">
+        <!-- section:: donate for noakhali  -->
+        <section
+          id="noakhali-donate-section"
+          class="flex flex-col md:flex-row gap-10 p-10 border-2 border-black/10 rounded-2xl h-[500px]"
+        >
+          <!-- section images  -->
+          <figure class="w-[600px] h-full">
+            <img
+              src="./assets/noakhali.png"
+              alt="noakhali peoples in flood"
+              class="w-full h-full rounded-md object-scale-down"
+            />
+          </figure>
+
+          <!-- section description  -->
+          <div class="flex-1 space-y-6">
+            <!-- donated money display sontainer -->
+            <div
+              class="flex items-center gap-2 bg-[#D4C9BE] px-6 py-3 rounded-lg w-36"
+            >
+              <img src="./assets/coin.png" alt="coin" />
+              <p class="text-black/70 font-medium text-lg">
+                <span>0</span> BTD
+              </p>
+            </div>
+
+            <!-- donation description container -->
+            <div>
+              <h3 class="font-bold text-xl leading-8 text-[#123458]">
+                Donate for Flood at Noakhali, Bangladesh
+              </h3>
+              <p class="mt-4 font-light text-[#123458]/70 leading-7">
+                The recent floods in Noakhali have caused significant damage to
+                homes infrastructure. Your donation will help provide essential
+                supplies and to those affected by this disaster. Every
+                contribution, big or small, makes difference. Please join us in
+                supporting the relief efforts and making a positive impact on
+                the lives of those in need.
+              </p>
+            </div>
+
+            <!-- donation form  -->
+            <form class="flex flex-col" action="">
+              <input
+                type="number"
+                name=""
+                id=""
+                class="p-4 rounded-md border-2 border-[#D4C9BE] outline-none focus:border-[#123458] font-medium text-lg placeholder:font-light"
+                placeholder="Write Donation Amount"
+                min="1"
+              />
+              <p class="hidden text-red-500 text-sm font-medium mt-2.5">
+                ⚠️ Invaid Input
+              </p>
+              <button
+                type="button"
+                class="btn bg-gradient-to-r from-[#E0D8C3] to-[#D2C7B0] text-[#123458] font-semibold lg:text-xl px-6 py-3 lg:px-10 lg:py-7 rounded-lg shadow-md hover:from-[#D2C7B0] hover:to-[#E0D8C3] transition ease-in-out duration-300 mt-5"
+              >
+                Donate Now
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
 
     <!-- footer section  -->
-    <footer></footer>
+    <footer class="h-20 bg-gradient-to-b from-[#F1EFEC] to-[#D4C9BE]"></footer>
 
     <!-- script link  -->
     <script src="./js/index.js"></script>
