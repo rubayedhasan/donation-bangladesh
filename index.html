@@ -88,10 +88,11 @@
 
     <!-- main section  -->
     <main class="px-5 pb-10 lg:pb-16 pt-12 lg:pt-20">
-      <div class="container mx-auto">
+      <div class="container mx-auto space-y-10 md:space-y-16">
+        <!-- -------1st donat section--------  -->
         <!-- section:: donate for noakhali  -->
         <section
-          id="noakhali-donate-section"
+          id="donate-for-noakhalli"
           class="flex flex-col lg:flex-row-reverse xl:flex-row justify-center items-center gap-8 lg:gap-10 p-6 md:p-10 border-2 border-black/10 rounded-2xl xl:h-[500px]"
         >
           <!-- section images  -->
@@ -106,10 +107,10 @@
           </figure>
 
           <!-- section description  -->
-          <div class="flex-1 space-y-6">
-            <!-- donated money display sontainer -->
+          <div class="w-full h-full lg:flex-1 space-y-6">
+            <!-- donated money display container -->
             <div
-              class="flex items-center gap-2 bg-[#D4C9BE] px-5 lg:px-6 py-3 rounded-lg w-36"
+              class="flex items-center justify-center gap-2 bg-[#D4C9BE] px-5 lg:px-6 py-3 rounded-lg w-[200px]"
             >
               <img src="./assets/coin.png" alt="coin" />
               <p class="text-black/70 font-medium text-lg">
@@ -123,12 +124,11 @@
                 Donate for Flood at Noakhali, Bangladesh
               </h3>
               <p class="mt-4 font-light text-[#123458]/70 leading-7">
-                The recent floods in Noakhali have caused significant damage to
-                homes infrastructure. Your donation will help provide essential
-                supplies and to those affected by this disaster. Every
-                contribution, big or small, makes difference. Please join us in
-                supporting the relief efforts and making a positive impact on
-                the lives of those in need.
+                The recent floods in Noakhali have caused widespread damage.
+                Your donation will provide essential supplies to those affected.
+                Every contribution, large or small, makes a difference. Join us
+                in supporting relief efforts and positively impacting the lives
+                of those in need.
               </p>
             </div>
 
@@ -138,7 +138,338 @@
                 type="number"
                 name=""
                 id=""
-                class="p-4 rounded-md border-2 border-[#D4C9BE] outline-none focus:border-[#123458] font-medium text-lg placeholder:font-light"
+                class="px-3 py-2.5 md:p-4 rounded-md border-2 border-[#D4C9BE] outline-none focus:border-[#123458] font-medium text-lg placeholder:font-light"
+                placeholder="Write Donation Amount"
+                min="1"
+              />
+              <p class="hidden text-red-500 text-sm font-medium mt-2.5">
+                ⚠️ Invaid Input
+              </p>
+              <button
+                type="button"
+                class="btn bg-gradient-to-r from-[#E0D8C3] to-[#D2C7B0] text-[#123458] font-semibold lg:text-xl px-6 py-3 lg:px-10 lg:py-7 rounded-lg shadow-md hover:from-[#D2C7B0] hover:to-[#E0D8C3] transition ease-in-out duration-300 mt-5"
+              >
+                Donate Now
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- -------2nd donat section--------  -->
+        <!-- section:: donate for feni  -->
+        <section
+          id="donate-for-feni"
+          class="p-6 md:p-10 border-2 border-black/10 rounded-2xl xl:h-[500px] flex flex-col lg:flex-row-reverse xl:flex-row justify-center items-center gap-8 lg:gap-10"
+        >
+          <!-- section images  -->
+          <figure
+            class="lg:w-[450px] xl:w-[600px] md:h-[450px] lg:h-full flex justify-center items-center"
+          >
+            <img
+              src="./assets/feni.png"
+              alt="feli peoples in flood"
+              class="w-full h-full rounded-md object-scale-down"
+            />
+          </figure>
+
+          <!-- section description  -->
+          <div class="w-full h-full lg:flex-1 space-y-6">
+            <!-- donated money display container -->
+            <div
+              class="flex items-center justify-center gap-2 bg-[#D4C9BE] px-5 lg:px-6 py-3 rounded-lg w-[200px]"
+            >
+              <img src="./assets/coin.png" alt="coin" />
+              <p class="text-black/70 font-medium text-lg">
+                <span>600</span> BTD
+              </p>
+            </div>
+
+            <!-- donation description container -->
+            <div>
+              <h3 class="font-bold text-xl leading-8 text-[#123458]">
+                Donate for Flood Relief in Feni,Bangladesh
+              </h3>
+              <p class="mt-4 font-light text-[#123458]/70 leading-7">
+                The recent floods in Feni have devastated communities. Your
+                donation will provide immediate aid, including food, clean
+                water, and medical supplies. Every contribution helps rebuild
+                lives and offers crucial support to those affected. Please
+                consider donating today to assist those in urgent need.
+              </p>
+            </div>
+
+            <!-- donation form  -->
+            <form class="flex flex-col" action="">
+              <input
+                type="number"
+                name=""
+                id=""
+                class="px-3 py-2.5 md:p-4 rounded-md border-2 border-[#D4C9BE] outline-none focus:border-[#123458] font-medium text-lg placeholder:font-light"
+                placeholder="Write Donation Amount"
+                min="1"
+              />
+              <p class="hidden text-red-500 text-sm font-medium mt-2.5">
+                ⚠️ Invaid Input
+              </p>
+              <button
+                type="button"
+                class="btn bg-gradient-to-r from-[#E0D8C3] to-[#D2C7B0] text-[#123458] font-semibold lg:text-xl px-6 py-3 lg:px-10 lg:py-7 rounded-lg shadow-md hover:from-[#D2C7B0] hover:to-[#E0D8C3] transition ease-in-out duration-300 mt-5"
+              >
+                Donate Now
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- -------3rd donat section--------  -->
+        <!-- section:: aid for quota  -->
+        <section
+          id="aid-for-quota"
+          class="p-6 md:p-10 border-2 border-black/10 rounded-2xl xl:h-[500px] flex flex-col lg:flex-row-reverse xl:flex-row justify-center items-center gap-8 lg:gap-10"
+        >
+          <!-- section images  -->
+          <figure
+            class="lg:w-[450px] xl:w-[600px] md:h-[450px] lg:h-full flex justify-center items-center"
+          >
+            <img
+              src="./assets/quota-protest.png"
+              alt="protest for quota"
+              class="w-full h-full rounded-md object-scale-down"
+            />
+          </figure>
+
+          <!-- section description  -->
+          <div class="w-full h-full lg:flex-1 space-y-6">
+            <!-- donated money display container -->
+            <div
+              class="flex items-center justify-center gap-2 bg-[#D4C9BE] px-5 lg:px-6 py-3 rounded-lg w-[200px]"
+            >
+              <img src="./assets/coin.png" alt="coin" />
+              <p class="text-black/70 font-medium text-lg">
+                <span>2400</span> BTD
+              </p>
+            </div>
+
+            <!-- donation description container -->
+            <div>
+              <h3 class="font-bold text-xl leading-8 text-[#123458]">
+                Aid for Injured in the Quota Movement
+              </h3>
+              <p class="mt-4 font-light text-[#123458]/70 leading-7">
+                The recent Quota movement has caused injuries and hardship. Your
+                support is vital in providing medical care, rehabilitation, and
+                supplies to affected individuals. Donations help ensure they
+                receive the necessary care and aid their recovery during this
+                challenging time. Please consider contributing to their support.
+              </p>
+            </div>
+
+            <!-- donation form  -->
+            <form class="flex flex-col" action="">
+              <input
+                type="number"
+                name=""
+                id=""
+                class="px-3 py-2.5 md:p-4 rounded-md border-2 border-[#D4C9BE] outline-none focus:border-[#123458] font-medium text-lg placeholder:font-light"
+                placeholder="Write Donation Amount"
+                min="1"
+              />
+              <p class="hidden text-red-500 text-sm font-medium mt-2.5">
+                ⚠️ Invaid Input
+              </p>
+              <button
+                type="button"
+                class="btn bg-gradient-to-r from-[#E0D8C3] to-[#D2C7B0] text-[#123458] font-semibold lg:text-xl px-6 py-3 lg:px-10 lg:py-7 rounded-lg shadow-md hover:from-[#D2C7B0] hover:to-[#E0D8C3] transition ease-in-out duration-300 mt-5"
+              >
+                Donate Now
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- -------4th donat section--------  -->
+        <!-- section:: donate for feed the hungry  -->
+        <section
+          id="donate-for-feed-the-hungry"
+          class="p-6 md:p-10 border-2 border-black/10 rounded-2xl xl:h-[500px] flex flex-col lg:flex-row-reverse xl:flex-row justify-center items-center gap-8 lg:gap-10"
+        >
+          <!-- section images  -->
+          <figure
+            class="lg:w-[450px] xl:w-[600px] md:h-[450px] lg:h-full flex justify-center items-center"
+          >
+            <img
+              src="./assets/food-for-hungry.png"
+              alt="food for hungry"
+              class="w-full h-full rounded-md object-scale-down"
+            />
+          </figure>
+
+          <!-- section description  -->
+          <div class="w-full h-full lg:flex-1 space-y-6">
+            <!-- donated money display container -->
+            <div
+              class="flex items-center justify-center gap-2 bg-[#D4C9BE] px-5 lg:px-6 py-3 rounded-lg w-[200px]"
+            >
+              <img src="./assets/coin.png" alt="coin" />
+              <p class="text-black/70 font-medium text-lg">
+                <span>3000</span> BTD
+              </p>
+            </div>
+
+            <!-- donation description container -->
+            <div>
+              <h3 class="font-bold text-xl leading-8 text-[#123458]">
+                Help Feed the Hungry: Donate to BRAC
+              </h3>
+              <p class="mt-4 font-light text-[#123458]/70 leading-7">
+                BRAC is a leading NGO in Bangladesh, fighting poverty and hunger
+                by providing meals, nutrition support, and food security
+                programs. Donations help vulnerable families access food,
+                education, and sustainable health solutions, making a
+                significant impact in the fight against hunger in Bangladesh.
+              </p>
+            </div>
+
+            <!-- donation form  -->
+            <form class="flex flex-col" action="">
+              <input
+                type="number"
+                name=""
+                id=""
+                class="px-3 py-2.5 md:p-4 rounded-md border-2 border-[#D4C9BE] outline-none focus:border-[#123458] font-medium text-lg placeholder:font-light"
+                placeholder="Write Donation Amount"
+                min="1"
+              />
+              <p class="hidden text-red-500 text-sm font-medium mt-2.5">
+                ⚠️ Invaid Input
+              </p>
+              <button
+                type="button"
+                class="btn bg-gradient-to-r from-[#E0D8C3] to-[#D2C7B0] text-[#123458] font-semibold lg:text-xl px-6 py-3 lg:px-10 lg:py-7 rounded-lg shadow-md hover:from-[#D2C7B0] hover:to-[#E0D8C3] transition ease-in-out duration-300 mt-5"
+              >
+                Donate Now
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- -------5th donat section--------  -->
+        <!-- section:: Donate to the Bangladesh Cancer Society  -->
+        <section
+          id="donate-for-cancer-society"
+          class="p-6 md:p-10 border-2 border-black/10 rounded-2xl xl:h-[500px] flex flex-col lg:flex-row-reverse xl:flex-row justify-center items-center gap-8 lg:gap-10"
+        >
+          <!-- section images  -->
+          <figure
+            class="lg:w-[450px] xl:w-[600px] md:h-[450px] lg:h-full flex justify-center items-center"
+          >
+            <img
+              src="./assets/donate-for-cancer.png"
+              alt="Donate to the Bangladesh Cancer Society"
+              class="w-full h-full rounded-md object-scale-down"
+            />
+          </figure>
+
+          <!-- section description  -->
+          <div class="w-full h-full lg:flex-1 space-y-6">
+            <!-- donated money display container -->
+            <div
+              class="flex items-center justify-center gap-2 bg-[#D4C9BE] px-5 lg:px-6 py-3 rounded-lg w-[200px]"
+            >
+              <img src="./assets/coin.png" alt="coin" />
+              <p class="text-black/70 font-medium text-lg">
+                <span>1200</span> BTD
+              </p>
+            </div>
+
+            <!-- donation description container -->
+            <div>
+              <h3 class="font-bold text-xl leading-8 text-[#123458]">
+                Donate to the Bangladesh Cancer Society
+              </h3>
+              <p class="mt-4 font-light text-[#123458]/70 leading-7">
+                The Bangladesh Cancer Society provides support and care for
+                cancer patients through early detection, treatment services, and
+                awareness campaigns. Donations fund medical treatments, patient
+                support, and cancer prevention efforts, offering hope and
+                essential care to those battling cancer in Bangladesh.
+              </p>
+            </div>
+
+            <!-- donation form  -->
+            <form class="flex flex-col" action="">
+              <input
+                type="number"
+                name=""
+                id=""
+                class="px-3 py-2.5 md:p-4 rounded-md border-2 border-[#D4C9BE] outline-none focus:border-[#123458] font-medium text-lg placeholder:font-light"
+                placeholder="Write Donation Amount"
+                min="1"
+              />
+              <p class="hidden text-red-500 text-sm font-medium mt-2.5">
+                ⚠️ Invaid Input
+              </p>
+              <button
+                type="button"
+                class="btn bg-gradient-to-r from-[#E0D8C3] to-[#D2C7B0] text-[#123458] font-semibold lg:text-xl px-6 py-3 lg:px-10 lg:py-7 rounded-lg shadow-md hover:from-[#D2C7B0] hover:to-[#E0D8C3] transition ease-in-out duration-300 mt-5"
+              >
+                Donate Now
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- -------6th donat section--------  -->
+        <!-- section:: Support Health and Hygiene in Bangladesh  -->
+        <section
+          id="support-health"
+          class="p-6 md:p-10 border-2 border-black/10 rounded-2xl xl:h-[500px] flex flex-col lg:flex-row-reverse xl:flex-row justify-center items-center gap-8 lg:gap-10"
+        >
+          <!-- section images  -->
+          <figure
+            class="lg:w-[450px] xl:w-[600px] md:h-[450px] lg:h-full flex justify-center items-center"
+          >
+            <img
+              src="./assets/support-health.png"
+              alt="Support Health and Hygiene in Bangladesh"
+              class="w-full h-full rounded-md object-scale-down"
+            />
+          </figure>
+
+          <!-- section description  -->
+          <div class="w-full h-full lg:flex-1 space-y-6">
+            <!-- donated money display container -->
+            <div
+              class="flex items-center justify-center gap-2 bg-[#D4C9BE] px-5 lg:px-6 py-3 rounded-lg w-[200px]"
+            >
+              <img src="./assets/coin.png" alt="coin" />
+              <p class="text-black/70 font-medium text-lg">
+                <span>1100</span> BTD
+              </p>
+            </div>
+
+            <!-- donation description container -->
+            <div>
+              <h3 class="font-bold text-xl leading-8 text-[#123458]">
+                Support Health and Hygiene in Bangladesh
+              </h3>
+              <p class="mt-4 font-light text-[#123458]/70 leading-7">
+                Your donation helps improve health and hygiene in Bangladesh by
+                funding vital programs that provide clean water, sanitation,
+                healthcare services, and education. These initiatives reduce the
+                spread of diseases, improve public health, and ensure that
+                vulnerable communities have access to basic health and hygiene
+                essentials.
+              </p>
+            </div>
+
+            <!-- donation form  -->
+            <form class="flex flex-col" action="">
+              <input
+                type="number"
+                name=""
+                id=""
+                class="px-3 py-2.5 md:p-4 rounded-md border-2 border-[#D4C9BE] outline-none focus:border-[#123458] font-medium text-lg placeholder:font-light"
                 placeholder="Write Donation Amount"
                 min="1"
               />
