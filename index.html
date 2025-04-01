@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- header section  -->
-    <header class="">
+    <header class="sticky top-0">
       <!-- section:: navbar -->
       <div class="bg-[#D4C9BE] py-5 md:py-8 px-5">
         <nav
@@ -88,7 +88,11 @@
 
     <!-- main section  -->
     <main class="px-5 pb-10 lg:pb-16 pt-12 lg:pt-20">
-      <div class="container mx-auto space-y-10 md:space-y-16">
+      <!-- donate section container  -->
+      <div
+        id="donate-container"
+        class="container mx-auto space-y-10 md:space-y-16"
+      >
         <!-- -------1st donat section--------  -->
         <!-- section:: donate for noakhali  -->
         <section
@@ -486,10 +490,49 @@
           </div>
         </section>
       </div>
+
+      <!-- history container  -->
+      <section id="history-container" class="hidden min-h-[500px]">
+        <div class="container mx-auto px-5 space-y-6">
+          <!-- recent transction  -->
+          <div class="border-2 border-black rounded-md p-6">
+            <h5 class="font-semibold text-xl text-[#123458]">
+              500 Taka Donated for Donate for flood at Noakhali, Bangladesh
+            </h5>
+            <p class="font-medium pt-4">
+              Date: Sun Sep 23 2024 GMT +6:00 (Bangladesh)
+            </p>
+          </div>
+          <!-- recent transction  -->
+          <div class="border-2 border-black rounded-md p-6">
+            <h5 class="font-semibold text-xl text-[#123458]">
+              500 Taka Donated for Donate for flood at Noakhali, Bangladesh
+            </h5>
+            <p class="font-medium pt-4">
+              Date: Sun Sep 23 2024 GMT +6:00 (Bangladesh)
+            </p>
+          </div>
+          <!-- recent transction  -->
+          <div class="border-2 border-black rounded-md p-6">
+            <h5 class="font-semibold text-xl text-[#123458]">
+              500 Taka Donated for Donate for flood at Noakhali, Bangladesh
+            </h5>
+            <p class="font-medium pt-4">
+              Date: Sun Sep 23 2024 GMT +6:00 (Bangladesh)
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- footer section  -->
-    <footer class="h-20 bg-gradient-to-b from-[#F1EFEC] to-[#D4C9BE]"></footer>
+    <footer class="pt-10 pb-8 bg-gradient-to-b from-[#F1EFEC] to-[#D4C9BE]">
+      <div class="container mx-auto">
+        <p class="font-semibold text-center text-sm text-[#123458]">
+          Copyright © 2025 - All right reserved by Aid for Bangladesh
+        </p>
+      </div>
+    </footer>
 
     <!-- script link  -->
     <script src="./js/index.js"></script>
