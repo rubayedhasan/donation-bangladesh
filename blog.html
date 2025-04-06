@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Page-Aid of Bangladesh</title>
+    <title>Blog Page - Aid of Bangladesh</title>
     <!-- favicon link  -->
     <link rel="shortcut icon" href="./assets/coin.png" type="image/x-icon" />
 
@@ -21,8 +21,79 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <main>
-      <h1 class="bg-red-400 container mx-auto text-center">Welcome to Blog</h1>
+    <!-- header section  -->
+    <header class="sticky top-0">
+      <!-- section:: navbar -->
+      <div class="bg-[#D4C9BE] py-5 md:py-8 px-5">
+        <nav
+          class="navbar container mx-auto gap-y-5 md:gap-y-0 flex-wrap md:flex-nowrap"
+        >
+          <div
+            class="navbar-start w-1/3 md:w-1/2 order-3 md:order-1 justify-end md:justify-start"
+          >
+            <button
+              class="btn btn-md lg:btn-lg bg-[#F1EFEC] hover:bg-slate-200 text-[#123458] font-semibold px-6 py-3 rounded-lg shadow-md transition ease-in-out duration-300"
+            >
+              Home
+            </button>
+          </div>
+          <div class="navbar-center order-1 md:order-2 w-full md:w-auto">
+            <div class="flex items-center justify-center gap-5 mx-auto">
+              <figure>
+                <img
+                  src="./assets/logo.png"
+                  alt="logo-put coint in a bank"
+                  class="w-full object-scale-down"
+                />
+              </figure>
+              <h1 class="font-semibold text-lg md:text-2xl text-[#123458]">
+                Aid For Bangladesh
+              </h1>
+            </div>
+          </div>
+          <div
+            class="navbar-end w-2/3 md:w-1/2 justify-start md:justify-end order-2 md:order-3"
+          >
+            <div class="flex items-center gap-3">
+              <figure>
+                <img src="./assets/coin.png" alt="coin" />
+              </figure>
+              <p class="font-medium text-xl text-[#123458]/70">
+                <span>5500</span> BTD
+              </p>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- section:: banner section  -->
+      <section
+        id="banner"
+        class="bg-[#F1EFEC] shadow-sm px-5 py-8 lg:pt-14 lg:pb-12 rounded-b-sm"
+      >
+        <div class="container mx-auto flex justify-center items-center gap-8">
+          <button
+            class="btn bg-gradient-to-r from-[#E0D8C3] to-[#D2C7B0] text-[#123458] font-semibold lg:text-xl px-6 py-3 lg:px-10 lg:py-7 rounded-lg shadow-md hover:from-[#D2C7B0] hover:to-[#E0D8C3] transition ease-in-out duration-300"
+          >
+            Donation
+          </button>
+          <button
+            class="btn btn-outline border-[#D4C9BE] text-[#123458] font-semibold lg:text-xl px-6 py-3 lg:px-10 lg:py-7 rounded-lg shadow-md transition ease-in-out duration-300"
+          >
+            History
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <!-- main section  -->
+    <main class="px-5 pb-10 lg:pb-16 pt-12 lg:pt-20">
+      <h1 class="bg-red-400 container mx-auto text-center">
+        Main section of Blog
+      </h1>
     </main>
+
+    <!-- script link  -->
+    <script src="./js/blog.js"></script>
   </body>
 </html>
