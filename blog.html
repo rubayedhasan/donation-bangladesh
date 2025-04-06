@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="nord" class="bg-[#F1EFEC]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- header section  -->
-    <header class="sticky top-0">
+    <header>
       <!-- section:: navbar -->
       <div class="bg-[#D4C9BE] py-5 md:py-8 px-5">
         <nav
@@ -69,11 +69,104 @@
 
     <!-- main section  -->
     <main class="px-5 pt-10 md:pt-12">
-      <section class="container mx-auto">
+      <section id="faq-section" class="container mx-auto">
+        <!-- section title container -->
         <hgroup class="flex items-center gap-4">
           <h3 class="text-2xl md:text-3xl font-bold">Important FAQ</h3>
           <img src="./assets/question.gif" alt="question mark" />
         </hgroup>
+
+        <!-- accordions container  -->
+        <div id="accordion-contianer" class="space-y-5 pt-8">
+          <!-- 1st accordion -->
+          <div
+            class="collapse collapse-arrow border-2 border-black/10 rounded-2xl p-2.5 md:p-5"
+          >
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-lg md:text-xl font-semibold ">
+              What is the Document Object Model (DOM)?
+            </div>
+            <div class="collapse-content text-sm md:text-base text-justify leading-7">
+              <p>
+                The DOM is a programming interface for web documents. It
+              represents the page so that programs can manipulate its structure,
+              style, and content. It converts the HTML document into a tree of
+              objects that can be accessed and modified by JavaScript.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2nd accordion -->
+          <div
+            class="collapse collapse-arrow border-2 border-black/10 rounded-2xl p-2.5 md:p-5"
+          >
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-lg md:text-xl font-semibold">
+                How do you select an element from the DOM?
+            </div>
+            <div class="collapse-content text-sm md:text-base text-justify leading-7">
+                <p>
+                    You can select an element from the DOM using various methods, depending on how you want to target the element:
+                    <ol class="list-decimal list-inside">
+                        <li><strong>document.getElementById(id):</strong> Selects an element by its unique id.</li>
+                        <li><strong>document.querySelector(selector):</strong> Selects the first element that matches a CSS selector (like class, id, or element type).</li>
+                        <li><strong>document.querySelectorAll(selector):</strong> Selects all elements that match the CSS selector and returns a NodeList.</li>
+                        <li><strong>
+                            document.getElementsByClassName(className):
+                        </strong> Selects elements with a specific class name.</li>
+                        <li><strong>document.getElementsByTagName(tagName):</strong> Selects all elements of a specified tag type (e.g., div, p).</li>
+                    </ol>
+                </p>
+            </div>
+          </div>
+
+          <!-- 3rd accordion -->
+          <div
+            class="collapse collapse-arrow border-2 border-black/10 rounded-2xl p-2.5 md:p-5"
+          >
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-lg md:text-xl font-semibold">
+              What is event delegation in the context of the DOM, and why is it
+              useful?
+            </div>
+            <div class="collapse-content text-sm md:text-base text-justify leading-7">
+                <p>
+                    Event delegation is a technique where you attach a single event listener to a parent element, rather than attaching individual event listeners to each child element. This is possible because events bubble up through the DOM tree. For example, instead of adding a click listener to every individual button inside a list, you can add it to the parent <ul> and check which child element triggered the event using event.target. This is useful because it reduces memory consumption and improves performance, especially in cases where the DOM content changes dynamically (e.g., adding or removing list items), as you don't need to reattach event listeners to new elements.
+                </p>
+            </div>
+          </div>
+
+          <!-- 4th accordion -->
+          <div
+            class="collapse collapse-arrow border-2 border-black/10 rounded-2xl p-2.5 md:p-5"
+          >
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-lg md:text-xl font-semibold">
+              How do you manipulate an element's attributes and styles using the
+              DOM?
+            </div>
+            <div class="collapse-content text-sm md:text-base text-justify leading-7">
+              <p>
+                <strong>Manipulating Attributes:</strong> You can use methods like
+              setAttribute() and getAttribute() to change or retrieve the values
+              of an element's attributes. For example,
+              element.setAttribute('src', 'new-image.jpg') changes the src
+              attribute of an image element.
+              </p>
+
+              <p>
+                <strong>Manipulating Styles:</strong> You can modify an element’s
+              inline styles directly through the style property. For example,
+              element.style.color = 'red' will change the text color of the
+              element to red. You can also manipulate more complex styles like
+              width, height, font size, etc. If you need to change CSS classes,
+              you can use element.classList.add(), element.classList.remove(),
+              or element.classList.toggle() to add, remove, or toggle classes
+              that can control styles.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
