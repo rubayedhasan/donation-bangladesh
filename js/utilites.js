@@ -60,7 +60,29 @@ function reseField(fieldId) {
   document.getElementById(fieldId).value = "";
 }
 
+// get innerText Value
+function getElementInnerValue(elementId) {
+  return document.getElementById(elementId).innerText;
+}
+
 // set innerText value
-function setElementValue(elementId, newValue) {
+function setElementInnerValue(elementId, newValue) {
   document.getElementById(elementId).innerText = newValue;
+}
+
+// add recent transaction to history log
+function updateHistoryLog(moneyYouDonated, donateTitle) {
+  const historyContainer = document.getElementById("history-logs");
+  const div = document.createElement("div");
+  div.innerHTML = `
+     
+            <h5 class="font-semibold text-xl text-[#123458]">
+              ${moneyYouDonated} Taka Donated for ${donateTitle}
+            </h5>
+            <p class="font-medium pt-4">
+              Date: ${new Date()}
+            </p>
+    `;
+  div.classList.add("border-2", "border-black", "rounded-md", "p-6");
+  historyContainer.appendChild(div);
 }

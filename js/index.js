@@ -49,15 +49,19 @@ document
     // read element properties
     const balance = currentBalance();
     const donationMoney = getFieldNumValue("input-donation-for-noakhali");
+    const title = getElementInnerValue("title-flood-at-noakhali");
 
     const newBalance = balance - donationMoney;
 
     // update the balance
-    setElementValue("current-balance", newBalance);
+    setElementInnerValue("current-balance", newBalance);
 
     // update donation money
-    setElementValue("total-donation-for-noakhali", donationMoney);
+    setElementInnerValue("total-donation-for-noakhali", donationMoney);
 
     // reset input field
     reseField("input-donation-for-noakhali");
+
+    // update history of donation
+    updateHistoryLog(donationMoney, title);
   });
