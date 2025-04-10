@@ -1,10 +1,14 @@
-// event listener for blog button
+/**
+ * event listener for blog button
+ */
 document.getElementById("btn-blog").addEventListener("click", function () {
   //   go to the blog.html page
   window.location.href = "../blog.html";
 });
 
-// event listener for donation button
+/**
+ * event listener for donation button
+ */
 document.getElementById("btn-donation").addEventListener("click", function () {
   // add active styles to donation button
   activeButtonStyles("btn-donation");
@@ -19,7 +23,9 @@ document.getElementById("btn-donation").addEventListener("click", function () {
   showElement("donate-section-container");
 });
 
-// event listener for history button
+/**
+ * event listener for history button
+ */
 document.getElementById("btn-history").addEventListener("click", function () {
   //   add active styles to history button
   activeButtonStyles("btn-history");
@@ -33,3 +39,25 @@ document.getElementById("btn-history").addEventListener("click", function () {
   //   hide donate section container
   hideElement("donate-section-container");
 });
+
+/**
+ * event listener for donate now::(donate for flood at noakhali) button
+ */
+document
+  .getElementById("btn-donate-for-noakhali")
+  .addEventListener("click", function () {
+    // read element properties
+    const balance = currentBalance();
+    const donationMoney = getFieldNumValue("input-donation-for-noakhali");
+
+    const newBalance = balance - donationMoney;
+
+    // update the balance
+    setElementValue("current-balance", newBalance);
+
+    // update donation money
+    setElementValue("total-donation-for-noakhali", donationMoney);
+
+    // reset input field
+    reseField("input-donation-for-noakhali");
+  });

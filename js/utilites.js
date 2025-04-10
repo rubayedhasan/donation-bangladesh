@@ -40,3 +40,27 @@ function deactiveButtonStyles(elementId) {
     .getElementById(elementId)
     .classList.add("btn-outline", "border-[#D4C9BE]");
 }
+
+//get current banlance as number value
+function currentBalance() {
+  const balance = document.getElementById("current-balance").innerText;
+  const balanceAsNum = parseFloat(balance);
+  return balanceAsNum;
+}
+
+// get input field number value
+function getFieldNumValue(fieldId) {
+  const value = document.getElementById(fieldId).value;
+  const numValue = parseFloat(value);
+  return numValue;
+}
+
+// reset input field value
+function reseField(fieldId) {
+  document.getElementById(fieldId).value = "";
+}
+
+// set innerText value
+function setElementValue(elementId, newValue) {
+  document.getElementById(elementId).innerText = newValue;
+}
