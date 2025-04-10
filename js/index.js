@@ -84,4 +84,7 @@ document
 
     // update history of donation
     updateHistoryLog(donationMoney, title);
+
+    // success aleart massage
+    alert(`successfully you have donated for ${title}`);
   });
