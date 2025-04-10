@@ -65,6 +65,11 @@ function getElementInnerValue(elementId) {
   return document.getElementById(elementId).innerText;
 }
 
+// get innerText value As Number
+function getElemntInnerNumberValue(elementId) {
+  return parseFloat(document.getElementById(elementId).innerText);
+}
+
 // set innerText value
 function setElementInnerValue(elementId, newValue) {
   document.getElementById(elementId).innerText = newValue;

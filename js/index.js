@@ -50,14 +50,34 @@ document
     const balance = currentBalance();
     const donationMoney = getFieldNumValue("input-donation-for-noakhali");
     const title = getElementInnerValue("title-flood-at-noakhali");
+    const currentDonatedMoney = getElemntInnerNumberValue(
+      "total-donation-for-noakhali"
+    );
 
+    // validation
+    if (donationMoney <= 0 || isNaN(donationMoney)) {
+      showElement("logical-error-donate-for-noakhali");
+      return;
+    } else {
+      hideElement("logical-error-donate-for-noakhali");
+    }
+
+    if (donationMoney > balance) {
+      showElement("logical-error-donate-for-noakhali");
+      return;
+    } else {
+      hideElement("logical-error-donate-for-noakhali");
+    }
+
+    // calculation balance & donation money
     const newBalance = balance - donationMoney;
+    const newDonatedMoney = currentDonatedMoney + donationMoney;
 
     // update the balance
     setElementInnerValue("current-balance", newBalance);
 
     // update donation money
-    setElementInnerValue("total-donation-for-noakhali", donationMoney);
+    setElementInnerValue("total-donation-for-noakhali", newDonatedMoney);
 
     // reset input field
     reseField("input-donation-for-noakhali");
