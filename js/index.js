@@ -41,7 +41,7 @@ document.getElementById("btn-history").addEventListener("click", function () {
 });
 
 /**
- * event listener for donate now::(donate for flood at noakhali) button
+ * 1. event listener for donate now::(donate for flood at noakhali) button
  */
 document
   .getElementById("btn-donate-for-noakhali")
@@ -89,7 +89,56 @@ document
     showElement("modal-container");
   });
 
-// event listener for modal close button
+/**
+ *  2. event listerner for donate now::(Donate for Flood Relief in Feni) button
+ */
+document
+  .getElementById("btn-donate-for-feni")
+  .addEventListener("click", function () {
+    // read element
+    const balance = currentBalance();
+    const donationMoney = getFieldNumValue("input-donate-for-feni");
+    const title = getElementInnerValue("title-flood-in-feni");
+    const currentDonatedMoney = getElemntInnerNumberValue(
+      "total-donation-for-feni"
+    );
+
+    // validation
+    if (donationMoney <= 0 || isNaN(donationMoney)) {
+      showElement("logical-error-donate-for-feni");
+      return;
+    } else {
+      hideElement("logical-error-donate-for-feni");
+    }
+
+    if (donationMoney > balance) {
+      showElement("logical-error-donate-for-feni");
+      return;
+    } else {
+      hideElement("logical-error-donate-for-feni");
+    }
+
+    // calculation
+    const newBalance = balance - donationMoney;
+    const newDonatedMoney = currentDonatedMoney + donationMoney;
+
+    // update balance & total donation money
+    setElementInnerValue("current-balance", newBalance);
+    setElementInnerValue("total-donation-for-feni", newDonatedMoney);
+
+    // reset input field
+    reseField("input-donate-for-feni");
+
+    // update history log
+    updateHistoryLog(donationMoney, title);
+
+    // open modal
+    showElement("modal-container");
+  });
+
+/**
+ * event listener for modal close button
+ */
 document.getElementById("close-popup").addEventListener("click", function () {
   hideElement("modal-container");
 });

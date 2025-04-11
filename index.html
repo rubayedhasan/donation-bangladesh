@@ -194,14 +194,17 @@
             >
               <img src="./assets/coin.png" alt="coin" />
               <p class="text-black/70 font-medium text-lg">
-                <span>600</span> BTD
+                <span id="total-donation-for-feni">600</span> BTD
               </p>
             </div>
 
             <!-- donation description container -->
             <div>
-              <h3 class="font-bold text-xl leading-8 text-[#123458]">
-                Donate for Flood Relief in Feni,Bangladesh
+              <h3
+                id="title-flood-in-feni"
+                class="font-bold text-xl leading-8 text-[#123458]"
+              >
+                Donate for Flood Relief in Feni, Bangladesh
               </h3>
               <p class="mt-4 font-light text-[#123458]/70 leading-7">
                 The recent floods in Feni have devastated communities. Your
@@ -217,16 +220,20 @@
               <input
                 type="number"
                 name=""
-                id=""
+                id="input-donate-for-feni"
                 class="px-3 py-2.5 md:p-4 rounded-md border-2 border-[#D4C9BE] outline-none focus:border-[#123458] font-medium text-lg placeholder:font-light"
                 placeholder="Write Donation Amount"
                 min="1"
               />
-              <p class="hidden text-red-500 text-sm font-medium mt-2.5">
+              <p
+                id="logical-error-donate-for-feni"
+                class="hidden text-red-500 text-sm font-medium mt-2.5"
+              >
                 ⚠️ Invaid Input
               </p>
               <button
                 type="button"
+                id="btn-donate-for-feni"
                 class="btn bg-gradient-to-r from-[#E0D8C3] to-[#D2C7B0] text-[#123458] font-semibold lg:text-xl px-6 py-3 lg:px-10 lg:py-7 rounded-lg shadow-md hover:from-[#D2C7B0] hover:to-[#E0D8C3] transition ease-in-out duration-300 mt-5"
               >
                 Donate Now
@@ -514,7 +521,7 @@
       <!-- modal section container  -->
       <section
         id="modal-container"
-        class="bg-[#F1EFEC]/60 fixed top-0 left-0 w-full h-full flex justify-center items-center transition-all duration-300 ease-in-out"
+        class="hidden bg-[#F1EFEC]/60 fixed top-0 left-0 w-full h-full flex justify-center items-center transition-all duration-300 ease-in-out"
       >
         <div
           class="popup bg-[#D4C9BE] text-[#123458] text-center px-2.5 py-4 md:px-8 md:py-10 rounded-md shadow-md"
