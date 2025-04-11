@@ -137,6 +137,53 @@ document
   });
 
 /**
+ * event listener for donate now::(aid for quota) button
+ */
+document
+  .getElementById("btn-aid-for-quota")
+  .addEventListener("click", function () {
+    // read element properties
+    const balance = currentBalance();
+    const donationMoney = getFieldNumValue("input-aid-for-quota");
+    const title = getElementInnerValue("title-aid-for-quota");
+    const currentDonatedMoney = getElemntInnerNumberValue(
+      "total-donation-aid-for-quota"
+    );
+
+    // validation
+    if (donationMoney <= 0 || isNaN(donationMoney)) {
+      showElement("logical-error-aid-for-quota");
+      return;
+    } else {
+      hideElement("logical-error-aid-for-quota");
+    }
+
+    if (donationMoney > balance) {
+      showElement("logical-error-aid-for-quota");
+      return;
+    } else {
+      hideElement("logical-error-aid-for-quota");
+    }
+
+    // calculation
+    const newBalance = balance - donationMoney;
+    const newDonatedMoney = currentDonatedMoney + donationMoney;
+
+    // update balance & donation money
+    setElementInnerValue("current-balance", newBalance);
+    setElementInnerValue("total-donation-aid-for-quota", newDonatedMoney);
+
+    // reset input field
+    reseField("input-aid-for-quota");
+
+    // update history log
+    updateHistoryLog(donationMoney, title);
+
+    // open modal
+    showElement("modal-container");
+  });
+
+/**
  * event listener for modal close button
  */
 document.getElementById("close-popup").addEventListener("click", function () {
