@@ -224,7 +224,7 @@ document
   });
 
 /**
- * 5. event listener for donate now::(Feed the Hungry) button
+ * 5. event listener for donate now::(donate for cancer socitey) button
  */
 document
   .getElementById("btn-donate-for-cancer-society")
@@ -255,6 +255,46 @@ document
 
     // reset input field
     resetField("input-donate-for-cancer-society");
+
+    // update history log
+    updateHistoryLog(donationMoney, title);
+
+    // open modal
+    showElement("modal-container");
+  });
+
+/**
+ * 6. event listener for donate now::(Support Health and Hygiene) button
+ */
+document
+  .getElementById("btn-support-health")
+  .addEventListener("click", function () {
+    // read element properties
+    const balance = currentBalance();
+    const donationMoney = getFieldNumValue("input-support-health");
+    const title = getElementInnerValue("title-support-health");
+    const currentDonatedMoney = getElementInnerNumberValue(
+      "total-donation-for-support-health"
+    );
+
+    // validation
+    if (donationMoney <= 0 || isNaN(donationMoney) || donationMoney > balance) {
+      showElement("logical-error-support-health");
+      return;
+    } else {
+      hideElement("logical-error-support-health");
+    }
+
+    // calculation
+    const newBalance = balance - donationMoney;
+    const newDonatedMoney = currentDonatedMoney + donationMoney;
+
+    // update balance & donated money
+    setElementInnerValue("current-balance", newBalance);
+    setElementInnerValue("total-donation-for-support-health", newDonatedMoney);
+
+    // reset input field
+    resetField("input-support-health");
 
     // update history log
     updateHistoryLog(donationMoney, title);
