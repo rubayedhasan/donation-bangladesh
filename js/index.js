@@ -85,6 +85,11 @@ document
     // update history of donation
     updateHistoryLog(donationMoney, title);
 
-    // success aleart massage
-    alert(`successfully you have donated for ${title}`);
+    // open modal
+    showElement("modal-container");
   });
+
+// event listener for modal close button
+document.getElementById("close-popup").addEventListener("click", function () {
+  hideElement("modal-container");
+});
