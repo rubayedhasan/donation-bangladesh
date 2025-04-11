@@ -50,7 +50,7 @@ document
     const balance = currentBalance();
     const donationMoney = getFieldNumValue("input-donation-for-noakhali");
     const title = getElementInnerValue("title-flood-at-noakhali");
-    const currentDonatedMoney = getElemntInnerNumberValue(
+    const currentDonatedMoney = getElementInnerNumberValue(
       "total-donation-for-noakhali"
     );
 
@@ -80,7 +80,7 @@ document
     setElementInnerValue("total-donation-for-noakhali", newDonatedMoney);
 
     // reset input field
-    reseField("input-donation-for-noakhali");
+    resetField("input-donation-for-noakhali");
 
     // update history of donation
     updateHistoryLog(donationMoney, title);
@@ -99,7 +99,7 @@ document
     const balance = currentBalance();
     const donationMoney = getFieldNumValue("input-donate-for-feni");
     const title = getElementInnerValue("title-flood-in-feni");
-    const currentDonatedMoney = getElemntInnerNumberValue(
+    const currentDonatedMoney = getElementInnerNumberValue(
       "total-donation-for-feni"
     );
 
@@ -127,7 +127,7 @@ document
     setElementInnerValue("total-donation-for-feni", newDonatedMoney);
 
     // reset input field
-    reseField("input-donate-for-feni");
+    resetField("input-donate-for-feni");
 
     // update history log
     updateHistoryLog(donationMoney, title);
@@ -137,7 +137,7 @@ document
   });
 
 /**
- * event listener for donate now::(aid for quota) button
+ * 3. event listener for donate now::(aid for quota) button
  */
 document
   .getElementById("btn-aid-for-quota")
@@ -146,7 +146,7 @@ document
     const balance = currentBalance();
     const donationMoney = getFieldNumValue("input-aid-for-quota");
     const title = getElementInnerValue("title-aid-for-quota");
-    const currentDonatedMoney = getElemntInnerNumberValue(
+    const currentDonatedMoney = getElementInnerNumberValue(
       "total-donation-aid-for-quota"
     );
 
@@ -174,7 +174,7 @@ document
     setElementInnerValue("total-donation-aid-for-quota", newDonatedMoney);
 
     // reset input field
-    reseField("input-aid-for-quota");
+    resetField("input-aid-for-quota");
 
     // update history log
     updateHistoryLog(donationMoney, title);
@@ -183,6 +183,45 @@ document
     showElement("modal-container");
   });
 
+/**
+ * 4. event listener for donate now::(Feed the Hungry) button
+ */
+document
+  .getElementById("btn-feed-the-hungry")
+  .addEventListener("click", function () {
+    // read element properties
+    const balance = currentBalance();
+    const donationMoney = getFieldNumValue("input-feed-the-hungry");
+    const title = getElementInnerValue("title-feed-the-hungry");
+    const currentDonatedMoney = getElementInnerNumberValue(
+      "total-donation-for-hungry"
+    );
+
+    // validation
+    if (donationMoney <= 0 || isNaN(donationMoney) || donationMoney > balance) {
+      showElement("logical-error-feed-the-hungry");
+      return;
+    } else {
+      hideElement("logical-error-feed-the-hungry");
+    }
+
+    // calculation
+    const newBalance = balance - donationMoney;
+    const newDonatedMoney = currentDonatedMoney + donationMoney;
+
+    // update balance & donated money
+    setElementInnerValue("current-balance", newBalance);
+    setElementInnerValue("total-donation-for-hungry", newDonatedMoney);
+
+    // reset input field
+    resetField("input-feed-the-hungry");
+
+    // update history log
+    updateHistoryLog(donationMoney, title);
+
+    // open modal
+    showElement("modal-container");
+  });
 /**
  * event listener for modal close button
  */

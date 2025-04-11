@@ -56,7 +56,7 @@ function getFieldNumValue(fieldId) {
 }
 
 // reset input field value
-function reseField(fieldId) {
+function resetField(fieldId) {
   document.getElementById(fieldId).value = "";
 }
 
@@ -66,7 +66,7 @@ function getElementInnerValue(elementId) {
 }
 
 // get innerText value As Number
-function getElemntInnerNumberValue(elementId) {
+function getElementInnerNumberValue(elementId) {
   return parseFloat(document.getElementById(elementId).innerText);
 }
 
