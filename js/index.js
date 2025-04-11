@@ -222,6 +222,47 @@ document
     // open modal
     showElement("modal-container");
   });
+
+/**
+ * 5. event listener for donate now::(Feed the Hungry) button
+ */
+document
+  .getElementById("btn-donate-for-cancer-society")
+  .addEventListener("click", function () {
+    // read element properties
+    const balance = currentBalance();
+    const donationMoney = getFieldNumValue("input-donate-for-cancer-society");
+    const title = getElementInnerValue("title-donate-for-cancer-society");
+    const currentDonatedMoney = getElementInnerNumberValue(
+      "total-donation-for-cancer-society"
+    );
+
+    // validation
+    if (donationMoney <= 0 || isNaN(donationMoney) || donationMoney > balance) {
+      showElement("logical-error-for-cancer-society");
+      return;
+    } else {
+      hideElement("logical-error-for-cancer-society");
+    }
+
+    // calculation
+    const newBalance = balance - donationMoney;
+    const newDonatedMoney = currentDonatedMoney + donationMoney;
+
+    // update balance & donated money
+    setElementInnerValue("current-balance", newBalance);
+    setElementInnerValue("total-donation-for-cancer-society", newDonatedMoney);
+
+    // reset input field
+    resetField("input-donate-for-cancer-society");
+
+    // update history log
+    updateHistoryLog(donationMoney, title);
+
+    // open modal
+    showElement("modal-container");
+  });
+
 /**
  * event listener for modal close button
  */
